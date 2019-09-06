@@ -575,7 +575,7 @@ bool CameraPub::updateCamera()
 
   Ogre::Vector3 position;
   Ogre::Quaternion orientation;
-  context_->getFrameManager()->getTransform(info->header.frame_id, ros::Time(), position, orientation);
+  context_->getFrameManager()->getTransform(info->header.frame_id, ros::Time(0), position, orientation);
 
   // printf( "CameraPub:updateCamera(): pos = %.2f, %.2f, %.2f.\n", position.x, position.y, position.z );
 
